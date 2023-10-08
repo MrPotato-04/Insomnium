@@ -1,0 +1,92 @@
+$bg-gradient-1: #3d1b62;
+$bg-gradient-2: #080313;
+$custom-font: "__helveticaNeueLTStd_81e619","__helveticaNeueLTStd_Fallback_81e619",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+@import '$lib/fonts/lib.scss';
+
+
+
+html,
+body {
+  // default font
+  // font-family: GintoNord;
+  color: #fff;
+
+  // reset
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  // smooth font
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // full height
+  height: 100%;
+
+
+  overflow: hidden;
+
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, $bg-gradient-1, $bg-gradient-2);
+
+  font-family: $custom-font;
+
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 2px;
+  }
+
+  
+
+  &:hover {
+    // blur cursor
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="rgba(0%, 0%, 0%, 45%)" /></svg>'), auto;
+    
+  }
+}
+.page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title#main {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: $custom-font;
+
+  path {
+    transition: stroke-dashoffset 1s ease-in-out;
+  }
+}
+
+
+
+
